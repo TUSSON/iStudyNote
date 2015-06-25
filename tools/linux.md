@@ -18,3 +18,23 @@ only print error output
 
 [Set up Solarized for Gnome Terminal](http://www.webupd8.org/2011/04/solarized-must-have-color-paletter-for.html)
 
+
+# cscope
+cscope -bkq -i cscope.files
+
+
+# git
+
+显示倒数第二个提交中该文件的内容
+git show HAED^:drivers/usb/dwc_otg/dwc_otg_driver.c
+
+显示倒数第二个提交中该文件的改变
+git show HAED^ drivers/usb/dwc_otg/dwc_otg_driver.c
+
+git diff HEAD
+
+git diff HEAD HEAD^ --stat
+drivers/video/rockchip/Kconfig  | 1 +
+drivers/video/rockchip/Makefile | 1 +
+
+git log --stat
