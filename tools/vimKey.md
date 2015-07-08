@@ -186,3 +186,10 @@ zE     除去 (Eliminate) 窗口里“所有”的折叠
     [c  prev diff  
     dp  diff put  
     do  diff get  
+
+# others
+    [i  display variable or funtion declare
+    gd  goto local declaration
+    gD  goto globa declaration
+    g*  like *, but without \< \>
+    *#  like #, but without \< \>
