@@ -193,3 +193,6 @@ zE     除去 (Eliminate) 窗口里“所有”的折叠
     gD  goto globa declaration
     g*  like *, but without \< \>
     *#  like #, but without \< \>
+
+# 计算
+先复制表达式，在插入模式'Ctrl+r ='进入计算模式,'Ctrl+r "'粘贴复制的表达式,Enter即可
