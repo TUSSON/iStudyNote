@@ -38,3 +38,17 @@ drivers/video/rockchip/Kconfig  | 1 +
 drivers/video/rockchip/Makefile | 1 +
 
 git log --stat
+
+# remount root fs as writeable
+mount -o remount,rw rootfs /
+
+# linux picture viewer software
+eog
+
+#sed replace string in files
+sed -i 's/regexp/replacement/g' filename
+
+${parameter:-word} 如果parameter没有设置或者为空，该表达式的值是word，word不赋值给parameter，否则是parameter的值
+${parameter:=word} 如果parameter没有设置或者为空，该表达式的值是word，word  赋值给parameter，否则是parameter的值
+
+gdb ' finish ' Continue running until just after function in the selected stack frame returns. 
