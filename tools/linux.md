@@ -52,3 +52,6 @@ ${parameter:-word} 如果parameter没有设置或者为空，该表达式的值�
 ${parameter:=word} 如果parameter没有设置或者为空，该表达式的值是word，word  赋值给parameter，否则是parameter的值
 
 gdb ' finish ' Continue running until just after function in the selected stack frame returns. 
+
+# ffmpeg convert nv12 to png
+ffmpeg -pix_fmt nv12 -s 1296x972 -i preview_image_3.yuv picture.png
