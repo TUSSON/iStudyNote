@@ -4,11 +4,11 @@
 
 ### 语法
 ```
-select  id from foods where name='JujyFruit';
-|____|  |___________| |_____________________|
+select id from foods where name='JujyFruit';
+|____| |___________| |_____________________|
  动词       主语              谓语
 ```
- 
+
 ### 常量
 
 - 'Jerry' 字符常量
@@ -56,7 +56,6 @@ tow lines */
 3. 扩展操作
     * Generalized Projection (广义投影) 
     * Left Outer Join (左外连接)
-    * Right Outer Join (右外连接)
-    * Full Outer Join (全外连接)
-
+    * Right Outer Join (右外连接) -- SQLite not support
+    * Full Outer Join (全外连接) -- SQLite not support
 
