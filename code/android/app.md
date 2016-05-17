@@ -23,3 +23,8 @@ GLSurfaceView：基于SurfaceView视图再次进行拓展的视图类，专用�
 ##### audio output sampling rate
 primary输出类先根据audio_policy.conf中的配置,选取不大于48000的最大sampling rate，然后通过audio hal打开output时，hal层可以修改samping rate
 
+
+##### stack symbolizes native crash dumps
+
+. build/envsetup.sh && lunch && stack
+[develoment/script/stack]
