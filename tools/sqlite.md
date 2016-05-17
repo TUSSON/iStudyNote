@@ -484,3 +484,67 @@ begin [ deferred | immediate | exclusive ] transaction;
 ```
 
 * * *
+
+### 数据库管理
+
+#### 附加数据库
+
+```sql
+attach [database] filename as database_name;
+
+detach [database] database_name;
+```
+
+#### 数据库清理
+
+```sql
+reindex collation_name;
+reindex table_name|index_name;
+```
+
+#### 数据库配置
+
+所有配置都是用编译指示 ( pragma ) 来实现的。
+
+##### 连接缓冲区大小
+
+```sql
+pragma cache_size;
+pragma cache_size=10000;
+```
+
+##### 获取数据库信息
+
+```sql
+-- 列出所有附着的数据库
+pragma database_list;
+
+-- 列出索引内字段的相关信息，索引名作为参数
+pragma index_info(index_name);
+
+-- 列出表中的索引信息，表名作为参数
+pragma index_list(table_name);
+
+-- 列出表中所有字段
+pragma table_info(table_name);
+```
+
+##### 写同步
+
+通过编译指示 ( synchronous ) 实现。有三种设置：
+> full: 在关键点同步所有数据到磁盘， 非常安全，慢。
+> normal: 在绝大多数关键点同步数据到磁盘，出现电力中断可能损毁数据库。
+> off: 不负责同步数据到磁盘，由操作系统负责，可加速高达50倍，出现电力中断可能损毁数据库。
+
+#### 系统目录
+
+sqlite_master 表是系统表，包含所有表、视图、索引、触发器。
+
+#### 查看查询计划
+
+用 explain query plan 命令查看 SQLite 执行查询的方法，列出查询时访问处理表与数据的具体步骤。
+```sql
+explain query plan select * from foods where id = 145;
+```
+
+* * *
