@@ -55,3 +55,6 @@ gdb ' finish ' Continue running until just after function in the selected stack 
 
 # ffmpeg convert nv12 to png
 ffmpeg -pix_fmt nv12 -s 1296x972 -i preview_image_3.yuv picture.png
+
+# virtualbox share folder can't create symbol link
+VBoxManage setextradata "VM name" VBoxInternal2/SharedFoldersEnableSymlinksCreate/*sharename* 1

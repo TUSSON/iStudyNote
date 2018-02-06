@@ -28,3 +28,13 @@ primary输出类先根据audio_policy.conf中的配置,选取不大于48000的�
 
 . build/envsetup.sh && lunch && stack
 [develoment/script/stack]
+
+### find a activity
+dumpsys window w | grep name
+
+### start a activity
+am start package.activity
+
+### compile error
+"Exception in thread "main" java.lang.UnsupportedClassVersionError: com/android/signapk/SignApk : Unsupported major.minor version 52.0"
+android 7.1 need jdk 1.8

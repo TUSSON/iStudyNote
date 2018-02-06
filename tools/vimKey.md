@@ -196,3 +196,7 @@ zE     除去 (Eliminate) 窗口里“所有”的折叠
 
 # 计算
 先复制表达式，在插入模式'Ctrl+r ='进入计算模式,'Ctrl+r "'粘贴复制的表达式,Enter即可
+
+# open binay file
+    vim <(xxd resource.bk)
+    vim -d <(xxd resource.bk) <(xxd resource.img)

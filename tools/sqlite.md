@@ -383,6 +383,7 @@ drop index index_name;
 ```
 
 对于下面会在where子句中出现的表达式，SQLite将使用单个字段索引。如果使用多字段索引时，从左到右智能地使用字段，直到无法找出有效条件。
+
 ```sql
 column {=|>|>=|<=|<} expression
 expression {=|>|>=|<=|<} column
@@ -416,6 +417,7 @@ raise(resulution, error_message);
 ###### 可更新的视图
 
 触发器使得创建可更新的视图成为可能。
+
 ```sql
 create trigger on_update_foods_view
 instead of update on foods_view
@@ -543,8 +545,10 @@ sqlite_master 表是系统表，包含所有表、视图、索引、触发器。
 #### 查看查询计划
 
 用 explain query plan 命令查看 SQLite 执行查询的方法，列出查询时访问处理表与数据的具体步骤。
+
 ```sql
 explain query plan select * from foods where id = 145;
 ```
 
 * * *
+
